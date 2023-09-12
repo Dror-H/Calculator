@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+.digit_display {
+    width: calc(100vw - 300px);
+    height: 250px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    padding-right: 3rem;
+    background-color: #30336b;
+
+}
+
+
+.digit_card {
+    height: 100%;
+    display: flex;
+    gap: 1rem;
+    justify-content: end;
+    align-items: center;
+
+}
+
+.digit_card h2 {
+    font-size: 3rem;
+    color: #fdfdfd;
+}
+
+
+
+.keyboard {
+    width: calc(100vw - 300px);
+    height: calc(100vh - 250px);
+    background-color: #30336b;
+
+}
+
+.history {
+    width: 300px;
+    height: 100vh;
+    border-left: 1px solid rgb(255, 255, 255);
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flexbox;
+    background-color: #30336b;
+    overflow-y: auto;
+}
+
+.history_header {
+    padding: 1rem;
+    background-color: red;
+    color: #fdfdfd;
+    text-align: center;
+
+}
+
+.history_card {
+    display: flex;
+    gap: 0.5rem;
+    padding: 1rem;
+    background-color: #30336b;
+    justify-content: right;
+
+    animation: scale-up-ver-top 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.history_card h2 {
+    color: #fdfdfd;
+    font-weight: 400;
+    font-size: 1.2 rem
+}
+
+.keys_container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 25% 25% 25% 25%;
+    align-items: center;
+    justify-items: center;
+    color: #fdfdfd;
+}
+
+.key {
+    width: 100px;
+    height: 60px;
+    /* background-color: red; */
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+
+.key:active {
+    background-color: white;
+    transform: scale(1.2);
+    color: black;
+
+}
+
+#digit_1,
+#digit_2,
+#result {
+    animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
+}
+
+
+
+
+
+
+
+@keyframes scale-up-ver-top {
+    0% {
+        -webkit-transform: scaleY(0.4);
+        transform: scaleY(0.4);
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
+    }
+
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
+    }
+}
+
+@keyframes scale-up-center {
+    0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
